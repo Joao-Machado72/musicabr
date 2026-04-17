@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Variáveis e resets */
+:root {
+  --bg-dark: #071113;
+  --accent-primary: #6366f1;
+  --accent-secondary: #fbbf24;
+  --accent-tertiary: #10b981;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,.heading-font {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Glass effect */
+.glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  overflow: hidden;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #f43f5e, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card inner */
+.card-inner {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Glow hover */
+.glow-hover {
+  transition: all 0.3s ease;
+}
+.glow-hover:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(20px);
+}
+
+/* Scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+
+/* Mobile menu hidden */
+#mobile-menu { display: none; }
+#mobile-menu.open { display: flex; }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+
+.ham span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #f8fafc;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.ham.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.ham.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
